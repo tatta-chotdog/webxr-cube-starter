@@ -4,10 +4,7 @@ import { CubeController } from "./utils/CubeController.js";
 
 let sceneManager, controllerManager, cubeController;
 
-init();
-animate();
-
-function init() {
+const init = () => {
   sceneManager = new SceneManager();
   sceneManager.initAR();
 
@@ -21,14 +18,17 @@ function init() {
     cubeController.onSelectStart.bind(cubeController),
     cubeController.onSelectEnd.bind(cubeController)
   );
-}
+};
 
-function animate() {
+const animate = () => {
   sceneManager.renderer.setAnimationLoop(render);
-}
+};
 
-function render() {
+const render = () => {
   controllerManager.update();
   cubeController.update(controllerManager);
   sceneManager.render();
-}
+};
+
+init();
+animate();
