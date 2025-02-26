@@ -16,7 +16,7 @@ export class SceneManager {
     this.renderer.xr.enabled = true;
     document.body.appendChild(this.renderer.domElement);
 
-    window.addEventListener("resize", this.onWindowResize.bind(this), false);
+    window.addEventListener("resize", this._onWindowResize.bind(this), false);
   }
 
   initAR() {
@@ -28,7 +28,7 @@ export class SceneManager {
     );
   }
 
-  onWindowResize() {
+  _onWindowResize() {
     this.camera.aspect = window.innerWidth / window.innerHeight;
     this.camera.updateProjectionMatrix();
     this.renderer.setSize(window.innerWidth, window.innerHeight);
