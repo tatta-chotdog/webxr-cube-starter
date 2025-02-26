@@ -20,14 +20,14 @@ const init = () => {
   );
 };
 
-const animate = () => {
-  sceneManager.renderer.setAnimationLoop(render);
-};
-
 const render = () => {
   controllerManager.update();
   cubeController.update(controllerManager);
   sceneManager.render();
+};
+
+const animate = () => {
+  sceneManager.renderer.setAnimationLoop(render);
 };
 
 init();
