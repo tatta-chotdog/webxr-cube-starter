@@ -23,10 +23,7 @@ export class SceneManager {
     document.body.appendChild(
       ARButton.createButton(this.renderer, {
         requiredFeatures: ["hit-test"],
-        sessionInit: {
-          mode: "immersive-ar",
-          optionalFeatures: ["local-floor", "bounded-floor"],
-        },
+        optionalFeatures: ["local-floor", "bounded-floor"],
       })
     );
   }
