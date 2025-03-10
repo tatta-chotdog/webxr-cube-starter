@@ -20,12 +20,7 @@ export class SceneManager {
   }
 
   initAR() {
-    document.body.appendChild(
-      ARButton.createButton(this.renderer, {
-        requiredFeatures: ["hit-test"],
-        optionalFeatures: ["local-floor", "bounded-floor"],
-      })
-    );
+    document.body.appendChild(ARButton.createButton(this.renderer));
   }
 
   _onWindowResize() {
