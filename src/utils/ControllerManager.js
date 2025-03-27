@@ -50,9 +50,6 @@ export class ControllerManager {
     scene.add(this.rightArrowHelper);
   }
 
-  /**
-   * 左右コントローラーのArrowHelper更新処理
-   */
   update() {
     if (this.leftController) {
       const matrix = new THREE.Matrix4();

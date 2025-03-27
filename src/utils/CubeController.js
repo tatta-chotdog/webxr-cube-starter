@@ -28,9 +28,6 @@ export class CubeController {
     this.initialCubeScale = this.cube.scale.clone();
   }
 
-  /**
-   * color初期化処理
-   */
   _initOriginalColors() {
     this.cube.userData.originalColors = [];
     if (Array.isArray(this.cube.material)) {
@@ -42,18 +39,12 @@ export class CubeController {
     }
   }
 
-  /**
-   * update処理
-   */
   update(controllerManager) {
     const highlight = this._updateHighlightStatus(controllerManager);
     this._handlePinch(controllerManager);
     this._updateCubeColor(highlight);
   }
 
-  /**
-   * ハイライト判定処理
-   */
   _updateHighlightStatus(controllerManager) {
     let highlight = false;
     const cubePos = new THREE.Vector3();
@@ -91,9 +82,6 @@ export class CubeController {
     return highlight;
   }
 
-  /**
-   * ピンチ処理
-   */
   _handlePinch(controllerManager) {
     const leftController = controllerManager.leftController;
     const rightController = controllerManager.rightController;
@@ -163,9 +151,6 @@ export class CubeController {
     }
   }
 
-  /**
-   * color更新処理
-   */
   _updateCubeColor(highlight) {
     if (Array.isArray(this.cube.material)) {
       this.cube.material.forEach((mat, i) => {
@@ -192,9 +177,6 @@ export class CubeController {
     }
   }
 
-  /**
-   * 掴み開始処理
-   */
   onSelectStart(controller) {
     const controllerPos = new THREE.Vector3();
     controller.getWorldPosition(controllerPos);
@@ -224,9 +206,6 @@ export class CubeController {
     }
   }
 
-  /**
-   * 掴み解除処理
-   */
   onSelectEnd(controller) {
     if (controller.userData.selected !== undefined) {
       this.scene.attach(controller.userData.selected);
