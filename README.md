@@ -1,11 +1,8 @@
 # WebXR Cube Starter
 
-
-
 ![cube](https://github.com/user-attachments/assets/7ac5fb42-36c4-4e49-98b9-ae18a8300e47)
 
 ## How to run it on your HMD?
-
 ### 1. Try it on Vercel  
 The project is deployed on Vercel. You can access it directly via the following link:  
 
