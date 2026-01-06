@@ -1,6 +1,5 @@
 # WebXR Cube Starter
-
-![cube](https://github.com/user-attachments/assets/7ac5fb42-36c4-4e49-98b9-ae18a8300e47)
+![cube_240x240](https://github.com/user-attachments/assets/98cbd929-6aee-4125-b979-148b66d5946b)
 
 ## How to run it on your HMD?
 ### 1. Try it on Vercel  
